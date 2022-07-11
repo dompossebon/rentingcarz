@@ -20,9 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
-Route::get('index/{withDate?}/{personal?}', 'FootballController@index');
+Route::get('/home', 'HomeController@index')->name('home')->name('home');
+Route::get('index/{withDate?}/{personal?}', 'FootballController@index')->middleware('auth');
 
-Route::post('savegame', 'FootballController@store');
+Route::post('savegame', 'FootballController@store')->name('savegame');
 Route::get('destroy/{id?}', 'FootballController@destroy');
 
