@@ -18,6 +18,18 @@ The following tools were used in building the project:
 
 Model Making in Linux Ubuntu 20.4
 
+-----------------------------
+## Prerequisites
+
+- Access a local machine running Ubuntu 20.04, or a development server as a non-root user with sudo privileges.
+If using a remote server, it is recommended to have an active firewall installed.
+
+- Docker installed on your server.
+
+- Docker Compose installed on your server.
+
+--------------------------
+
 ## Starting
 
 Clone the project repository:
@@ -46,15 +58,7 @@ then run the commands below:
 
 - docker-compose exec rentingcarz-app composer install
 
-- docker-compose exec rentingcarz-app php artisan key:generate
-
-then continue typing the commands...
-
-- docker-compose exec rentingcarz-app php artisan cache:clear
-
-- docker-compose exec rentingcarz-app php artisan config:clear
-
-- docker-compose exec rentingcarz-app php artisan migrate
+- docker-compose exec rentingcarz-app php artisan key:generate && docker-compose exec rentingcarz-app php artisan cache:clear && docker-compose exec rentingcarz-app php artisan config:clear && docker-compose exec rentingcarz-app php artisan migrate
 
 Now put the Project to the test!
 Good Enjoy!
